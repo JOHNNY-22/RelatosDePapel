@@ -1,0 +1,32 @@
+.book-detail__container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.book-detail__content {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.book-detail__image {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.book-detail__category {
+    background-color: #EDE0D4; /* Tu marrón pastel */
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+
+.book-detail__price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #5D4037;
+}

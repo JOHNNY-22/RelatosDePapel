@@ -4,23 +4,30 @@ import {BookCard} from "../components/BookCard.jsx";
 import "./Home.css"
 import {useState} from "react";
 
-export const Home = () => {
+// CORRECCIÓN: Recibe onCartClick como prop aquí
+export const Home = ({ onCartClick }) => {
 
     const [textofiltro, setfiltrolibro] = useState("");
 
-    const filterdebooks = textofiltro === "" ? booksData : booksData.filter((b) => b.title.toLocaleLowerCase().includes(textofiltro.toLowerCase()))
+    const filterdebooks = textofiltro === ""
+        ? booksData
+        : booksData.filter((b) => b.title.toLowerCase().includes(textofiltro.toLowerCase()));
 
     return (
         <div className="home">
-            <Header />
+            {/* Ahora onCartClick ya existe porque viene de App.jsx */}
+            <Header onCartClick={onCartClick} />
+
             <section className="home__search-container">
                 <input
                     type="text"
                     placeholder="¿Qué libro buscas hoy?..."
                     className="home__search-input"
+                    value={textofiltro}
                     onChange={(e) => setfiltrolibro(e.target.value)}
                 />
             </section>
+
             <main className="home__books">
                 {filterdebooks.map((book) => (
                     <BookCard
@@ -31,5 +38,4 @@ export const Home = () => {
             </main>
         </div>
     )
-
 }

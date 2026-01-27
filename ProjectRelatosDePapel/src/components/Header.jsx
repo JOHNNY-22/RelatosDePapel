@@ -1,19 +1,18 @@
+import React from 'react';
+import { useCart } from '../hooks/CartContext'; // Para el contador
+import './Header.css';
 
-    import React from 'react';
-    import './Header.css';
+export const Header = () => {
+    const { openCart, cart } = useCart();
+    const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
 
-    export const Header = () => {
-        return (
-            <header className="header">
-                <div className="header__container">
-                    <h1 className="header__logo">Relatos de Papel</h1>
-                    <div className="header__cart">
-                        <span className="header__cart-text">Cesta</span>
-                        <button className="header__cart-button">
-                            🛒 <span className="header__cart-count">0</span>
-                        </button>
-                    </div>
-                </div>
-            </header>
-        );
-    };
+    return (
+        <header className="header">
+            <h1 className="header__logo">Relatos de Papel</h1>
+            <div className="header__cart" onClick={openCart}>
+                <span>Cesta 🛒</span>
+                {totalItems > 0 && <span className="header__badge">{totalItems}</span>}
+            </div>
+        </header>
+    );
+};

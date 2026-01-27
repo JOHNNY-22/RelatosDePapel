@@ -1,0 +1,14 @@
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Escondido */
+    width: 350px;
+    height: 100vh;
+    background-color: #FDF8F5;
+    transition: right 0.4s ease-in-out; /* Animación suave */
+    z-index: 9999;
+}
+
+.cart-sidebar--open {
+    right: 0 !important; /* Aparece */
+}

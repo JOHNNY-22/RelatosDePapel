@@ -1,35 +1,39 @@
 .header {
-    width: 100%;
-    background-color: #D2B48C;
-    border-bottom: 1px solid #eaeaea;
-    padding: 1rem 0;
-}
-
-.header__container {
-    max-width: 1200px;
-    margin: 0 auto;
+    background-color: #D2B48C; /* El marrón pastel Tan */
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.header__search-input {
-    padding: 0.5rem 1rem;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    width: 300px;
+.header__logo {
+    margin: 0;
+    font-size: 1.8rem;
+    font-family: 'Playfair Display', serif; /* O la que prefieras */
 }
 
 .header__cart {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 8px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background 0.3s;
 }
 
-.header__cart-button {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
+.header__cart:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.header__cart-count {
+    background-color: #5D4037; /* Marrón oscuro para resaltar */
+    color: white;
+    font-size: 0.8rem;
+    padding: 2px 8px;
+    border-radius: 50%;
+    font-weight: bold;
 }
