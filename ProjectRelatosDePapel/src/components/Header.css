@@ -1,0 +1,35 @@
+.header {
+    width: 100%;
+    background-color: #D2B48C;
+    border-bottom: 1px solid #eaeaea;
+    padding: 1rem 0;
+}
+
+.header__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.header__search-input {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 300px;
+}
+
+.header__cart {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header__cart-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}

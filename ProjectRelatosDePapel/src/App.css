@@ -1,0 +1,11 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Alto total de la pantalla */
+}
+
+/* Esto hace que la Landing ocupe todo el espacio sobrante */
+/* y empuje al footer al final */
+main {
+    flex: 1;
+}

@@ -1,0 +1,74 @@
+/* Home.css */
+
+/* Bloque principal */
+.home {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f9f9f9; /* Un gris muy claro para que resalten las tarjetas */
+}
+
+/* Título o banner de la sección (opcional) */
+.home__title {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 2rem;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contenedor de los libros: Aquí ocurre la magia de las 3 columnas */
+.home__books {
+    display: grid;
+    /* Por defecto en móvil: 1 columna */
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenido */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.home__search-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    background-color: #fdf8f5; /* Un tono crema muy suave */
+}
+
+.home__search-input {
+    width: 80%;
+    max-width: 500px;
+    padding: 12px 20px;
+    border: 2px solid #D2B48C; /* El marrón pastel (Tan) */
+    border-radius: 25px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.home__search-input:focus {
+    border-color: #BCAAA4; /* Marrón un poco más oscuro al hacer clic */
+}
+
+.home__no-results {
+    grid-column: 1 / -1; /* Ocupa todo el ancho del grid */
+    text-align: center;
+    color: #666;
+    margin-top: 2rem;
+}
+
+/* Media Query para Tablets: 2 columnas */
+@media (min-width: 768px) {
+    .home__books {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Media Query para Escritorio: Tus 3 columnas fijas */
+@media (min-width: 1024px) {
+    .home__books {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

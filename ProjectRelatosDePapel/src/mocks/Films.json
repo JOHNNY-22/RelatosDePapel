@@ -1,0 +1,57 @@
+[
+  {
+    "id": "1",
+    "title": "El Quijote",
+    "author": "Miguel de Cervantes",
+    "price": 25.00,
+    "description": "Una aventura épica sobre un caballero de figura triste.",
+    "category": "Clásico",
+    "image": "quijote.jpg"
+  },
+  {
+    "id": "2",
+    "title": "Cien años de soledad",
+    "author": "Gabriel García Márquez",
+    "price": 19.90,
+    "description": "La saga de la familia Buendía en el pueblo de Macondo.",
+    "category": "Realismo Mágico",
+    "image": "Soledad.jpg"
+  },
+  {
+    "id": "3",
+    "title": "1984",
+    "author": "George Orwell",
+    "price": 15.50,
+    "description": "Una distopía sobre la vigilancia extrema y el control social.",
+    "category": "Distopía",
+    "image": "/1984.jpg"
+  },
+  {
+    "id": "4",
+    "title": "La Sombra del Viento",
+    "author": "Carlos Ruiz Zafón",
+    "price": 22.95,
+    "description": "Un joven es conducido por su padre a un misterioso lugar oculto en el corazón de la ciudad vieja: el Cementerio de los Libros Olvidados.",
+    "category": "Misterio",
+    "image": "/Sombra.jpg"
+  },
+  {
+    "id": "5",
+    "title": "El Principito",
+    "author": "Antoine de Saint-Exupéry",
+    "price": 10.50,
+    "description": "Un piloto se encuentra perdido en el desierto del Sahara tras una avería en su avión, donde conoce a un pequeño príncipe de otro planeta.",
+    "category": "Infantil / Filosofía",
+    "image": "/principito.jpg"
+  },
+  {
+    "id": "6",
+    "title": "Crónica de una Muerte Anunciada",
+    "author": "Gabriel García Márquez",
+    "price": 14.25,
+    "description": "Una reconstrucción de un asesinato real ocurrido en 1951, narrada como una falsa novela policíaca.",
+    "category": "Realismo Mágico",
+    "image": "/cronica.jpg"
+  }
+
+]

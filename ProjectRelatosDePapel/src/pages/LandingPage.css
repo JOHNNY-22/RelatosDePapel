@@ -1,0 +1,51 @@
+.landing {
+    flex: 1; /* Ocupa todo el espacio que le de el app-container */
+    display: flex;
+    overflow: hidden;
+}
+
+.landing__foto {
+    width: 100%;
+    flex: 1;
+    background-image: url('../../public/BlogEditorial.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center; /* Centra el texto verticalmente */
+    justify-content: center; /* Centra el texto horizontalmente */
+}
+
+.landing__overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Capa oscura para leer bien el texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing__content {
+    text-align: center;
+    color: white;
+}
+
+.landing__title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.landing__subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.landing__button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    background-color: #d4a373; /* Un tono café/libro */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}

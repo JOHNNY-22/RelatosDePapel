@@ -1,0 +1,20 @@
+.footer {
+    width: 100%;
+    background-color: #f4f4f4; /* Gris claro */
+    color: #333;
+    padding: 2rem 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer__copyright {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    color: #777;
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+}
+
+.footer__contact {
+    margin-left: 10px;
+}
