@@ -1,11 +1,11 @@
-import {Header} from "../components/Header.jsx"
-import booksData from "../mocks/Films.json"
-import {BookCard} from "../components/BookCard.jsx";
+import { Header } from "../components/Header.jsx"
+import booksData from "../mocks/books.json"
+import { BookCard } from "../components/BookCard.jsx";
 import "./Home.css"
-import {useState} from "react";
+import { useState } from "react";
 
 // CORRECCIÓN: Recibe onCartClick como prop aquí
-export const Home = ({ onCartClick }) => {
+export const Home = () => {
 
     const [textofiltro, setfiltrolibro] = useState("");
 
@@ -15,8 +15,8 @@ export const Home = ({ onCartClick }) => {
 
     return (
         <div className="home">
-            {/* Ahora onCartClick ya existe porque viene de App.jsx */}
-            <Header onCartClick={onCartClick} />
+            {/* El Header ya gestiona el carrito internamente */}
+            <Header />
 
             <section className="home__search-container">
                 <input
@@ -29,12 +29,18 @@ export const Home = ({ onCartClick }) => {
             </section>
 
             <main className="home__books">
-                {filterdebooks.map((book) => (
-                    <BookCard
-                        key={book.id}
-                        book={book}
-                    />
-                ))}
+                {filterdebooks.length > 0 ? (
+                    filterdebooks.map((book) => (
+                        <BookCard
+                            key={book.id}
+                            book={book}
+                        />
+                    ))
+                ) : (
+                    <div className="home__no-results">
+                        <p>No se encontraron libros con ese título 😔</p>
+                    </div>
+                )}
             </main>
         </div>
     )

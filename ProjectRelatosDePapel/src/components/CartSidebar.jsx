@@ -15,7 +15,6 @@ export const CartSidebar = () => {
             <div className="cart-sidebar__header">
                 <h2 className="cart-sidebar__title">Mi Cesta</h2>
                 {/* Usamos closeCart del contexto para cerrar */}
-                <button className="cart-sidebar__close" onClick={closeCart}>×</button>
             </div>
 
             <div className="cart-sidebar__content">

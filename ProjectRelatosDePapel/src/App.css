@@ -1,11 +1,11 @@
-.app-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Alto total de la pantalla */
+/* App.css o el archivo de estilos de tu componente principal */
+body, html {
+    overflow-x: hidden; /* Evita el scroll lateral en toda la web */
 }
 
-/* Esto hace que la Landing ocupe todo el espacio sobrante */
-/* y empuje al footer al final */
-main {
-    flex: 1;
+.app-container {
+    overflow-x: hidden; /* Refuerzo para el contenedor de React */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }

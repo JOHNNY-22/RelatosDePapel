@@ -1,14 +1,113 @@
 .cart-sidebar {
     position: fixed;
-    top: 0;
-    right: -400px; /* Escondido */
+    /* Ajusta este valor al alto de tu Header para que no lo tape */
+    top: 70px;
+    right: -400px;
     width: 350px;
-    height: 100vh;
-    background-color: #FDF8F5;
-    transition: right 0.4s ease-in-out; /* Animación suave */
-    z-index: 9999;
+    /* Calculamos el alto restando la cabecera */
+    height: calc(100vh - 70px);
+    background-color: #ffffff;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999; /* Un nivel por debajo del Header si este tiene z-index: 1000 */
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #f0f0f0;
 }
 
 .cart-sidebar--open {
-    right: 0 !important; /* Aparece */
+    right: 0 !important;
+}
+
+/* Título de la cesta */
+.cart-sidebar__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    padding: 20px;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+/* Contenedor de items con scroll elegante */
+.cart-sidebar__content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+}
+
+/* Diseño de cada libro en la cesta */
+.cart-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+
+}
+
+.cart-item__img {
+    width: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.cart-item__name {
+    font-size: 1rem;
+    margin: 0 0 5px 0;
+    font-weight: 600;
+}
+
+/* Botones de cantidad más bonitos */
+.cart-item__actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.cart-item__btn {
+    background: #f0f0f0;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cart-item__btn:hover {
+    background: #e0e0e0;
+}
+
+/* Footer de la cesta con el total */
+.cart-sidebar__footer {
+    padding: 20px;
+    background: #fcfcfc;
+    border-top: 1px solid #eee;
+}
+
+.cart-sidebar__total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.cart-sidebar__checkout {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.cart-sidebar__checkout:hover {
+    opacity: 0.9;
 }

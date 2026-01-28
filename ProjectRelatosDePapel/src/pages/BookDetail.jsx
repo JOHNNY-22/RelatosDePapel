@@ -1,12 +1,12 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import booksData from '../mocks/Films.json';
+import booksData from '../mocks/books.json';
 import { Header } from '../components/Header.jsx';
 import { useCart } from '../hooks/CartContext'; // Importamos el hook del carrito
 import './BookDetail.css';
 
-// 1. Recibimos onCartClick como prop
-export const BookDetail = ({ onCartClick }) => {
+// 1. Ya no necesitamos recibir props para el carrito
+export const BookDetail = () => {
     const { id } = useParams();
     const navigate = useNavigate();
     const { addToCart } = useCart(); // Extraemos la función para añadir
@@ -25,8 +25,7 @@ export const BookDetail = ({ onCartClick }) => {
 
     return (
         <div className="book-detail">
-            {/* 2. Ahora onCartClick ya está definido */}
-            <Header onCartClick={onCartClick} />
+            <Header />
 
             <main className="book-detail__container">
                 <button className="book-detail__back" onClick={() => navigate('/home')}>
