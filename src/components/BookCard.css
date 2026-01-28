@@ -11,6 +11,17 @@
     flex-direction: column;
     border: 1px solid #eee;
 }
+/* Quita el subrayado a todos los enlaces y links de la app */
+a, .link {
+    text-decoration: none !important;
+    color: inherit; /* Mantiene el color del texto original en lugar de ponerse azul */
+}
+
+/* Opcional: Si quieres que cambie algo al pasar el ratón, pero sin subrayado */
+a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
 
 .book-card:hover {
     transform: translateY(-5px);
